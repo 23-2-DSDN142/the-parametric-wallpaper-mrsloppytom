@@ -3,7 +3,7 @@ let plane1X = 180; // x-coordinate of plane 1
 let plane1Y = 15; // y-coordinate of plane 1
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
