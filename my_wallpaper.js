@@ -63,27 +63,75 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 //PAPER PLANE 2
 
 
-  fill(255);
-  triangle(
-    80, 90, //right
-    50, 150,
-    70, 150);
+  // fill(255);
+  // triangle(
+  //   80, 90, //right
+  //   50, 150,
+  //   70, 150);
 
-  triangle(
-    80, 90,
-    100, 150,
-    80, 150
-  );
+  // triangle(
+  //   80, 90,
+  //   100, 150,
+  //   80, 150
+  // );
 
-  noFill();
-  stroke(255);
-  line()
-
-
-  stroke(0, 0, 0);
-  bezier(200, 20, 10,10, 90, 90, 15, 200);
+  // noFill();
+  // stroke(255);
+  // line()
 
 
+  // stroke(0, 0, 0);
+  // bezier(200, 20, 10,10, 90, 90, 15, 200);
+
+fill(255);
+noStroke();
+  // ellipse(50, 150, 80, 40
+  // )
+  // ellipse(70, 130, 80, 60)
+
+  // ellipse(110, 140, 80, 60)
+  // ellipse(150, 140, 70, 50)
+
+//left cloud
+fill(200);
+circle(22, 145, 40) ;
+circle(50, 145, 60);
+circle(80, 125, 50);
+
+fill(255);
+circle(25, 140, 40) ;
+circle(50, 140, 60);
+circle(80, 120, 50);
+
+//right cloud
+fill(200);
+circle(150, 130, 50);
+circle(170, 150, 60);
+circle(180, 120, 40);
+
+
+fill(255);
+circle(150, 125, 50);
+circle(170, 145, 60);
+circle(180, 115, 40);
+
+
+//middle cloud
+circle(120, 80, 10)
+
+
+//trail
+noFill();
+stroke(255);
+bezier(150, 45, 
+  60, 150,
+  90, 50,
+  70, 70)
+
+  bezier(30, 70,
+    20, 120,
+    180, 10,
+    20, 30)
 
 
   // //plane wing background bottom part
