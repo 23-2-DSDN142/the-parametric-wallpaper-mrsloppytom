@@ -93,31 +93,28 @@ noStroke();
   // ellipse(150, 140, 70, 50)
 
 //left cloud
-fill(200);
-circle(22, 145, 40) ;
-circle(50, 145, 60);
-circle(80, 125, 50);
 
 fill(255);
-circle(25, 140, 40) ;
+circle(25, 160, 40) ;
 circle(50, 140, 60);
-circle(80, 120, 50);
+circle(30, 120, 50);
+circle(85, 150, 40)
+circle(50, 150, 50)
 
 //right cloud
 fill(200);
-circle(150, 130, 50);
-circle(170, 150, 60);
-circle(180, 120, 40);
-
+circle(140, 110, 50);
+circle(165, 145, 60);
+circle(165, 115, 40);
+circle(185, 120, 30)
 
 fill(255);
-circle(150, 125, 50);
-circle(170, 145, 60);
-circle(180, 115, 40);
+circle(135, 110, 50);
+circle(160, 145, 60);
+circle(160, 115, 40);
+circle(180, 120, 30)
 
 
-//middle cloud
-circle(120, 80, 10)
 
 
 //trail
@@ -125,13 +122,32 @@ noFill();
 stroke(255);
 bezier(150, 45, 
   60, 150,
-  90, 50,
-  70, 70)
+  70, 40,
+  40, 40)
 
-  bezier(30, 70,
-    20, 120,
-    180, 10,
-    20, 30)
+  bezier(40, 40,
+    30, 40,
+    10, 50,
+    40, 60)
+
+  bezier(40, 60,
+    110, 80, 
+    150, 60,
+    120, 30)
+
+  bezier(
+    120, 30,
+    95,1, 
+    5, 20,
+    10, 60
+  )
+
+  bezier(
+    10, 60,
+    20, 100, 
+    120, 100, 
+    130, 180
+  )
 
 
   // //plane wing background bottom part
