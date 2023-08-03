@@ -3,7 +3,7 @@ let plane1X = 180; // x-coordinate of plane 1
 let plane1Y = 15; // y-coordinate of plane 1
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
@@ -19,46 +19,47 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
+  stroke(10, 170, 200)
   line(0, 180, 200, 0); //diagonal line left to right
   line(0, 0, 200, 180); //diagonal line right to left
 
   
 
 //PAPER PLANE 1
-  noStroke();
-  fill(255);
-  //left wing
-  triangle(plane1X, plane1Y, //right
-  plane1X-40, plane1Y+5, //top
-  plane1X-30, plane1Y+15); //bottom
+    noStroke();
+    fill(255);
+    //left wing
+    triangle(plane1X, plane1Y, //right
+    plane1X-40, plane1Y+5, //top
+    plane1X-30, plane1Y+15); //bottom
 
-  //right wing
-  triangle(plane1X, plane1Y, //right
-  plane1X-25, plane1Y+20, //top
-  plane1X-10, plane1Y+35); //bottom
-
-  //grey area in middle
-    fill(220);
-  triangle(
-    plane1X, plane1Y, //right
-    plane1X-30, plane1Y+15, //top
-    plane1X-25, plane1Y+20); //bottom
-
-//grey area in middle continued
-  triangle(
-    plane1X-25, plane1Y+20, //right
-    plane1X-30, plane1Y+15, //top
-    plane1X-30, plane1Y+30 //bottom
-  );
-
-//dark area
-  fill(150);
-  triangle(
-    plane1X-20, plane1Y+25, //right
+    //right wing
+    triangle(plane1X, plane1Y, //right
     plane1X-25, plane1Y+20, //top
-    plane1X-30, plane1Y+30 //bottom
-  );
-  
+    plane1X-10, plane1Y+35); //bottom
+
+    //grey area in middle
+    fill(220);
+    triangle(
+      plane1X, plane1Y, //right
+      plane1X-30, plane1Y+15, //top
+      plane1X-25, plane1Y+20); //bottom
+
+    //grey area in middle continued
+    triangle(
+      plane1X-25, plane1Y+20, //right
+      plane1X-30, plane1Y+15, //top
+      plane1X-30, plane1Y+30 //bottom
+      );
+
+  //dark area
+    fill(150);
+    triangle(
+      plane1X-20, plane1Y+25, //right
+      plane1X-25, plane1Y+20, //top
+      plane1X-30, plane1Y+30 //bottom
+    );
+    
 
 //PAPER PLANE 2
 
@@ -95,59 +96,40 @@ noStroke();
 //left cloud
 
 fill(255);
-circle(25, 160, 40) ;
-circle(50, 140, 60);
-circle(30, 120, 50);
-circle(85, 150, 40)
-circle(50, 150, 50)
+circle(20, 160, 30) ;
+circle(50, 140, 50);
+circle(35, 150, 40);
+circle(70, 150, 30)
+circle(50, 150, 40)
 
 //right cloud
-fill(200);
-circle(140, 110, 50);
-circle(165, 145, 60);
-circle(165, 115, 40);
-circle(185, 120, 30)
 
 fill(255);
-circle(135, 110, 50);
-circle(160, 145, 60);
-circle(160, 115, 40);
-circle(180, 120, 30)
+circle(140, 110, 30);
+circle(150, 135, 40);
+circle(160, 115, 20);
+circle(180, 120, 10)
 
 
+//top left cloud
+fill(255);
+circle(30, 30, 30)
+circle(40, 45, 30)
 
+circle(45, 20, 30)
+
+circle (70, 20, 20)
+circle(55, 20, 20)
+circle(70, 35, 30)
 
 //trail
 noFill();
 stroke(255);
+strokeWeight(2);
 bezier(150, 45, 
-  60, 150,
-  70, 40,
-  40, 40)
-
-  bezier(40, 40,
-    30, 40,
-    10, 50,
-    40, 60)
-
-  bezier(40, 60,
-    110, 80, 
-    150, 60,
-    120, 30)
-
-  bezier(
-    120, 30,
-    95,1, 
-    5, 20,
-    10, 60
-  )
-
-  bezier(
-    10, 60,
-    20, 100, 
-    120, 100, 
-    130, 180
-  )
+  80, 100,
+  70, 100,
+  60, 60)
 
 
   // //plane wing background bottom part
