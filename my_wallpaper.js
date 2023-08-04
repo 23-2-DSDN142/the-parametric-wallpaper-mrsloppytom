@@ -2,6 +2,9 @@
 let plane1X = 180; // x-coordinate of plane 1
 let plane1Y = 15; // y-coordinate of plane 1
 
+let noCloud = true;
+let leftCloud = true;
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
@@ -17,12 +20,20 @@ function wallpaper_background() {
   background(155, 232, 235); //(240, 255, 240)light honeydew green colour
 }
 
+
+
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-  stroke(10, 170, 200)
+  stroke(10, 170, 200);
+  strokeWeight(4);
   line(0, 180, 200, 0); //diagonal line left to right
   line(0, 0, 200, 180); //diagonal line right to left
 
+  if(noCloud){
+    background(39, 27, 64)
+    
+
+  }
   
 
 //PAPER PLANE 1
@@ -84,6 +95,50 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // stroke(0, 0, 0);
   // bezier(200, 20, 10,10, 90, 90, 15, 200);
 
+//trail
+
+noFill();
+stroke(255, 150, 38);
+strokeWeight(3);
+      bezier(150, 45,
+        100,100,
+        100, 100,
+        0, 150);
+
+      bezier(150, 45,
+          100,100,
+          100, 100,
+          0, 180);
+
+      bezier(150, 45,
+          100,100,
+          100, 100,
+          30, 180);
+// bezier(150, 45,
+//   110, 80,
+//   100, 60,
+//   100, 30)
+
+// bezier(100, 30, 
+//   100, 5,
+//   70, 100,
+//   60, 60);
+
+// bezier(60, 60,
+//   50, 10,
+//   10, 30, 
+//   30, 80);
+
+// bezier(30, 80,
+//   40, 100,
+//    50, 200,
+//   100, 130);
+
+// bezier(100, 130,
+//   160, 30,
+//   10, 80,
+//   200, 150)
+
 fill(255);
 noStroke();
   // ellipse(50, 150, 80, 40
@@ -95,16 +150,33 @@ noStroke();
 
 //left cloud
 
-fill(255);
-circle(20, 160, 30) ;
-circle(50, 140, 50);
-circle(35, 150, 40);
-circle(70, 150, 30)
-circle(50, 150, 40)
+// let circX = 20
+// let circY = 160
+// let circDi = 30
+
+fill(195, 247, 241);
+leftCloud(20, 160, 30)
+
+function leftCloud(circX, circY, circDi){
+
+  circle(circX, circY, circDi) ;
+  circle(circX+circDi, circY-circX, circDi+circX);
+  circle(circDi+(circX/4), circY-(circX/2), circDi+(circX/2));
+  circle((circDi*2)+(circX/2), circY-(circX/2), circDi)
+  circle(circX+circDi, circY-(circX/2), circDi+(circX/2))
+  
+  
+}
+
+
+
+
 
 //right cloud
 
-fill(255);
+let circX=
+
+fill(222, 249, 252);
 circle(140, 110, 30);
 circle(150, 135, 40);
 circle(160, 115, 20);
@@ -112,7 +184,7 @@ circle(180, 120, 10)
 
 
 //top left cloud
-fill(255);
+fill(215, 241, 252);
 circle(30, 30, 30)
 circle(40, 45, 30)
 
@@ -122,14 +194,6 @@ circle (70, 20, 20)
 circle(55, 20, 20)
 circle(70, 35, 30)
 
-//trail
-noFill();
-stroke(255);
-strokeWeight(2);
-bezier(150, 45, 
-  80, 100,
-  70, 100,
-  60, 60)
 
 
   // //plane wing background bottom part
@@ -173,8 +237,6 @@ bezier(150, 45,
   // )
 
 
-
- 
 
 
 }
