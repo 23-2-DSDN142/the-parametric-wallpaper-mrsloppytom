@@ -5,19 +5,6 @@ let plane1Y = 15; // y-coordinate of plane 1
 
 
 
-let noClouds = false ;
-
-let leftCloud = true;
- 
-
-
-
-
-let daytime = true;
-if(daytime){
-
-}
-
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -49,15 +36,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   noStroke();
   leftCloud(20, 160, 30)
 
-
-  if(noClouds){
-    background(39, 27, 64)
-  }
-  else{
-      
-  }
-  
-
   
  let starX= 0
  let starY=0
@@ -65,11 +43,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
 
-  function stars(starX, starY, starDi){
-
-    fill(255)
-    circle(starX, starY, starDi)
-  }
 
   fill(255)
   //top row
@@ -158,9 +131,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 //trail
 
-let trail = true
-
-
 
 noFill();
 stroke(255, 150, 38);
@@ -182,13 +152,6 @@ strokeWeight(3);
 
 fill(255);
 noStroke();
-  // ellipse(50, 150, 80, 40
-  // )
-  // ellipse(70, 130, 80, 60)
-
-  // ellipse(110, 140, 80, 60)
-  // ellipse(150, 140, 70, 50)
-
 //left cloud
 
 // let circX = 20
@@ -196,16 +159,13 @@ noStroke();
 // let circDi = 30
 
 
-
-function leftCloud(circX, circY, circDi){
-
-  circle(circX, circY, circDi) ;
-  circle(circX+circDi, circY-circX, circDi+circX);
-  circle(circDi+(circX/4), circY-(circX/2), circDi+(circX/2));
-  circle((circDi*2)+(circX/2), circY-(circX/2), circDi)
-  circle(circX+circDi, circY-(circX/2), circDi+(circX/2))
+circle(20, 160, 30) ;
+circle(50, 140, 50);
+circle(35, 150, 40);
+circle(70, 150, 30)
+circle(50, 150, 40)
   
-}
+
 
 
 
@@ -230,6 +190,5 @@ circle(45, 20, 30)
 circle (70, 20, 20)
 circle(55, 20, 20)
 circle(70, 35, 30)
-
 
 }
