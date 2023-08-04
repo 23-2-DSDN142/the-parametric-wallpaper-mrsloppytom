@@ -5,9 +5,8 @@ let plane1Y = 15; // y-coordinate of plane 1
 
 
 
-
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
@@ -32,9 +31,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   line(0, 180, 200, 0); //diagonal line left to right
   line(0, 0, 200, 180); //diagonal line right to left
 
-  fill(195, 247, 241);
-  noStroke();
-  leftCloud(20, 160, 30)
 
   
  let starX= 0
@@ -45,6 +41,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
   fill(255)
+  noStroke();
   //top row
   circle(starX, starY, starDi);
   circle(50, starY, starDi);
@@ -150,20 +147,21 @@ strokeWeight(3);
           100, 100,
           30, 180);
 
-fill(255);
-noStroke();
+
 //left cloud
 
+fill(195, 247, 241);
+noStroke();
 // let circX = 20
 // let circY = 160
 // let circDi = 30
 
 
-circle(20, 160, 30) ;
+circle(20, 160, 30);
 circle(50, 140, 50);
 circle(35, 150, 40);
-circle(70, 150, 30)
-circle(50, 150, 40)
+circle(70, 150, 30);
+circle(50, 150, 40);
   
 
 
