@@ -5,20 +5,21 @@ let plane1Y = 15; // y-coordinate of plane 1
 //for background colour change and stars
 let night = true;
 
+//trail or no trail
 let trail = true;
 
-//lines in the background
+//lines in the background booleans
 let diagLines = false;
 
-let curvyLines = true;
+let curvyLines = false;
 
-
-let clouds = true;
-let darkClouds = true;
+//cloud booleans
+let clouds = false;
+let darkClouds = false;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -264,7 +265,7 @@ circle(70, 35, 30)
 
 }
 else{
-  (clouds)
+ 
 }
 
 }
