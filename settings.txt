@@ -9,23 +9,34 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = false; //if true, background colour is dark, adds stars
+let starDi= 5; //diameter of stars in night background
+
+//trail or no trail
+let trail = true; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = false; //if true, diagonal lines in the background
+
+let curvyLines = true; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = true; //if true, blue clouds (for day)
+let darkClouds = false; //if true, purple clouds (for night)
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 90;
 }
 
 /////////////////////////////////
@@ -33,21 +44,280 @@ function setup_wallpaper(pWallpaper) {
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = false; //if true, background colour is dark, adds stars
+let starDi= 5; //diameter of stars in night background
+
+//trail or no trail
+let trail = true; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = true; //if true, diagonal lines in the background
+
+let curvyLines = false; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = true; //if true, blue clouds (for day)
+let darkClouds = false; //if true, purple clouds (for night)
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 90;
 }
+
+/////////////////////////////////
+
+WALLPAPER 3:
+
+//your parameter variables go here!
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = false; //if true, background colour is dark, adds stars
+let starDi= 5; //diameter of stars in night background
+
+//trail or no trail
+let trail = false; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = true; //if true, diagonal lines in the background
+
+let curvyLines = false; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = true; //if true, blue clouds (for day)
+let darkClouds = false; //if true, purple clouds (for night)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 90;
+}
+
+/////////////////////////////////
+
+WALLPAPER 4:
+
+//your parameter variables go here!
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = false; //if true, background colour is dark, adds stars
+let starDi= 5; //diameter of stars in night background
+
+//trail or no trail
+let trail = false; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = true; //if true, diagonal lines in the background
+
+let curvyLines = true; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = false; //if true, blue clouds (for day)
+let darkClouds = false; //if true, purple clouds (for night)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 180;
+}
+
+/////////////////////////////////
+
+WALLPAPER 5:
+
+//your parameter variables go here!
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = true; //if true, background colour is dark, adds stars
+let starDi= 5; //diameter of stars in night background
+
+//trail or no trail
+let trail = true; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = false; //if true, diagonal lines in the background
+
+let curvyLines = true; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = false; //if true, blue clouds (for day)
+let darkClouds = true; //if true, purple clouds (for night)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 180;
+}
+
+/////////////////////////////////
+
+WALLPAPER 6:
+
+//your parameter variables go here!
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = true; //if true, background colour is dark, adds stars
+let starDi= 10; //diameter of stars in night background
+
+//trail or no trail
+let trail = true; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = true; //if true, diagonal lines in the background
+
+let curvyLines = false; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = false; //if true, blue clouds (for day)
+let darkClouds = true; //if true, purple clouds (for night)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+
+WALLPAPER 7:
+
+//your parameter variables go here!
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = true; //if true, background colour is dark, adds stars
+let starDi= 10; //diameter of stars in night background
+
+//trail or no trail
+let trail = true; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = true; //if true, diagonal lines in the background
+
+let curvyLines = false; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = false; //if true, blue clouds (for day)
+let darkClouds = false; //if true, purple clouds (for night)
+
+function setup_wallpaper(pWallpaper) 
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 100;
+
+/////////////////////////////////
+
+WALLPAPER 8: Made a mistake with adjusting star diameter here but thought it looked cool still
+
+//your parameter variables go here!
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = true; //if true, background colour is dark, adds stars
+let starDi= 50; //diameter of stars in night background
+
+//trail or no trail
+let trail = false; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = true; //if true, diagonal lines in the background
+
+let curvyLines = true; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = true; //if true, blue clouds (for day)
+let darkClouds = false; //if true, purple clouds (for night)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+
+WALLPAPER 9:
+
+//your parameter variables go here!
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
+
+//for background colour change and stars
+let night = true; //if true, background colour is dark, adds stars
+let starDi= 0; //diameter of stars in night background
+
+//trail or no trail
+let trail = false; //if true, adds an orange trail behind plane
+
+//lines in the background booleans
+let diagLines = false; //if true, diagonal lines in the background
+
+let curvyLines = false; //if true, curvy lines in background
+
+//cloud booleans
+let clouds = true; //if true, blue clouds (for day)
+let darkClouds = false; //if true, purple clouds (for night)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 180;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+
+
