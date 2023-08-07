@@ -1,21 +1,22 @@
 //your parameter variables go here!
-let plane1X = 180; // x-coordinate of plane 1
-let plane1Y = 15; // y-coordinate of plane 1
+let plane1X = 180; // x-coordinate of plane 
+let plane1Y = 15; // y-coordinate of plane 
 
 //for background colour change and stars
-let night = true;
+let night = false; //if true, background colour is dark, adds stars
+let starDi= 0; //diameter of stars in night background
 
 //trail or no trail
-let trail = true;
+let trail = true; //if true, adds an orange trail behind plane
 
 //lines in the background booleans
-let diagLines = false;
+let diagLines = false; //if true, diagonal lines in the background
 
-let curvyLines = false;
+let curvyLines = true; //if true, curvy lines in background
 
 //cloud booleans
-let clouds = false;
-let darkClouds = false;
+let clouds = true; //if true, blue clouds (for day)
+let darkClouds = false; //if true, purple clouds (for night)
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -29,12 +30,12 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(155, 232, 235); //(240, 255, 240)light honeydew green colour
+  background(155, 232, 235); //light blue sky colour
 
   if(night){
-    background(75, 59, 120);
+    background(75, 59, 120); //changes background colour to dark purple (for night)
   }
-  else{background(155, 232, 235);
+  else{background(155, 232, 235); //if night false, keep background light blue
   }
   
 }
@@ -42,76 +43,71 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
 
-  if(curvyLines){
-  stroke(10, 170, 200);
+  if(curvyLines){       //if CurvyLines true, puts curvy lines in background
+  stroke(10, 170, 200); //dark blue colour
   strokeWeight(4);
-  noFill()
-  bezier(0, 20,
+  noFill();
+  bezier(0, 20,         //top line
     100, 100,
     100, 100,
-    200,20)
+    200,20);
 
-    bezier(0, 180,
-      100, 100,
-      100, 100,
-      200,180)
-    }
+  bezier(0, 180,        //bottom line
+    100, 100,
+    100, 100,
+    200,180);
+  }
 
-  if (diagLines){
-  stroke(10, 170, 200);
+  if (diagLines){       //if diagLines true, puts two perpendicular lines in background
+  stroke(10, 170, 200); //dark blue colour
   strokeWeight(4);
   line(0, 180, 200, 0); //diagonal line left to right
   line(0, 0, 200, 180); //diagonal line right to left
   }
 
-  if(night){
-
-    let starX= 0
-    let starY=0
-    let starDi=5
-
-    fill(255)
+  if(night){            //if night true, stars are added to background
+    fill(255);
     noStroke();
-    //top row
-    circle(starX, starY, starDi);
-    circle(starDi*10, starY, starDi);
-    circle(starDi*20, starY, starDi);
-    circle(150, starY, starDi);
-    circle(200, starY, starDi);
-
-    //2 row
-    circle(25, starDi*6, starDi);
-    circle(75, starDi*6, starDi);
-    circle(125, starDi*6, starDi);
-    circle(175, starDi*6, starDi);
-
-    //3 row
-    circle(0, starDi*12, starDi);
-    circle(50, starDi*12, starDi);
-    circle(100, starDi*12, starDi);
-    circle(150, starDi*12, starDi);
-    circle(200, starDi*12, starDi);
-
-    //4 row
+    //1st row of stars
+    circle(0, 0, starDi);
+    circle(50, 0, starDi);
+    circle(100, 0, starDi);
+    circle(150, 0, starDi);
+    circle(200, 0, starDi);
+  
+    //2nd row of stars
+    circle(25, 30, starDi);
+    circle(75, 30, starDi);
+    circle(125, 30, starDi);
+    circle(175, 30, starDi);
+  
+    //3rd row of stars
+    circle(0, 60, starDi);
+    circle(50, 60, starDi);
+    circle(100, 60, starDi);
+    circle(150, 60, starDi);
+    circle(200, 60, starDi);
+  
+    //4th row of stars
     circle(25, 90, starDi);
     circle(75, 90, starDi);
     circle(125, 90, starDi);
     circle(175, 90, starDi);
-
-    //5 row
+  
+    //5th row of stars
     circle(0, 120, starDi);
     circle(50, 120, starDi);
     circle(100, 120, starDi);
     circle(150, 120, starDi);
     circle(200, 120, starDi);
-
-    //6 row
+  
+    //6th row of stars
     circle(25, 150, starDi);
     circle(75, 150, starDi);
     circle(125, 150, starDi);
     circle(175, 150, starDi);
-
-    //7 row
+  
+    //7th row of stars
     circle(0, 180, starDi);
     circle(50, 180, starDi);
     circle(100, 180, starDi);
@@ -120,16 +116,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   }
 
   
- 
-
-
-
-  
-  
-  
-//PAPER PLANE 1
+//PAPER PLANE 
     noStroke();
-    fill(255);
+    fill(255);//white colour
+
     //left wing
     triangle(plane1X, plane1Y, //right
     plane1X-40, plane1Y+5, //top
@@ -141,81 +131,53 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     plane1X-10, plane1Y+35); //bottom
 
     //grey area in middle
-    fill(220);
-    triangle(
-      plane1X, plane1Y, //right
+    fill(220); //dark grey colour
+    triangle(plane1X, plane1Y, //right
       plane1X-30, plane1Y+15, //top
       plane1X-25, plane1Y+20); //bottom
 
     //grey area in middle continued
-    triangle(
-      plane1X-25, plane1Y+20, //right
+    triangle(plane1X-25, plane1Y+20, //right
       plane1X-30, plane1Y+15, //top
-      plane1X-30, plane1Y+30 //bottom
-      );
+      plane1X-30, plane1Y+30); //bottom
+      
 
-  //dark area
-    fill(150);
+  //darkest area
+    fill(150); //darker grey colour
     triangle(
       plane1X-20, plane1Y+25, //right
       plane1X-25, plane1Y+20, //top
-      plane1X-30, plane1Y+30 //bottom
-    );
+      plane1X-30, plane1Y+30); //bottom
     
 
 //trail
-
-if(trail){
+if(trail){  //if trail True, adds three orange trail lines behind plane
 noFill();
-stroke(255, 150, 38);
+stroke(255, 150, 38); //bright orange colour
 strokeWeight(3);
-      bezier(150, 45,
-        100,100,
+  bezier(150, 45,     //left most trail
+        100, 100,
         100, 100,
         0, 150);
 
-      bezier(150, 45,
-          100,100,
+  bezier(150, 45,     //middle trail
+          100, 100,
           100, 100,
           0, 180);
 
-      bezier(150, 45,
+  bezier(150, 45,     //right most trail
           100,100,
           100, 100,
           30, 180);
+}
 
-      }
 
+if (clouds){ //if clouds true, adds these light coloured clouds
 
-if (clouds){
-//left cloud
-
-fill(195, 247, 241);
 noStroke();
-// let circX = 20
-// let circY = 160
-// let circDi = 30
-
-
-circle(20, 160, 30);
-circle(50, 140, 50);
-circle(35, 150, 40);
-circle(70, 150, 30);
-circle(50, 150, 40);
-  
-
-
-//right cloud
-
-fill(222, 249, 252);
-circle(140, 110, 30);
-circle(150, 135, 40);
-circle(160, 115, 20);
-circle(180, 120, 10);
-
 
 //top left cloud
-fill(215, 241, 252);
+fill(215, 241, 252); //light blue colour
 circle(30, 30, 30)
 circle(40, 45, 30)
 
@@ -224,33 +186,27 @@ circle(45, 20, 30)
 circle (70, 20, 20)
 circle(55, 20, 20)
 circle(70, 35, 30)
-}
 
-
-if(darkClouds){
-  
-noStroke();
-// let circX = 20
-// let circY = 160
-// let circDi = 30
-
-fill(117, 99, 168);
+//bottom left cloud
+fill(195, 247, 241); //greeny blue sorta colour
 circle(20, 160, 30);
 circle(50, 140, 50);
 circle(35, 150, 40);
 circle(70, 150, 30);
 circle(50, 150, 40);
   
-
-
 //right cloud
-
-fill(128, 105, 191);
+fill(222, 249, 252); //lightest blue colour
 circle(140, 110, 30);
 circle(150, 135, 40);
 circle(160, 115, 20);
 circle(180, 120, 10);
+}
 
+
+if(darkClouds){   //if darkClouds true, adds purple clouds (to pair with the night look)
+  
+noStroke();
 
 //top left cloud
 fill(175, 152, 237);
@@ -263,10 +219,23 @@ circle (70, 20, 20)
 circle(55, 20, 20)
 circle(70, 35, 30)
 
+//bottom left cloud
+fill(117, 99, 168);
+circle(20, 160, 30);
+circle(50, 140, 50);
+circle(35, 150, 40);
+circle(70, 150, 30);
+circle(50, 150, 40);
+  
+//right cloud
+fill(128, 105, 191);
+circle(140, 110, 30);
+circle(150, 135, 40);
+circle(160, 115, 20);
+circle(180, 120, 10);
+
 }
-else{
- 
-}
+
 
 }
 
